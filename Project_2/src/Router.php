@@ -1,17 +1,19 @@
 <?php
 
+require 'Singleton.php';
 class Router extends Singleton 
 {
     
     const Routes = [
+        '/' => 'index.php',
         '/index' => '/index.php',
         '/create' => 'createDoc.php',
         '/update' => 'updateDoc.php'
     ];
 
-    protected function getMethod($routes, $uri) {
-        
-        foreach ($routes as $route => $val) {       
+    protected function getMethod() {
+        $uri = $_SERVER['REQUEST_URI'];
+        foreach (self::Routes as $route => $val) {       
             if ($route == $uri) {
                 return $val;
             }
@@ -27,9 +29,7 @@ class Router extends Singleton
     }
 
     public function run() {
-        
-        $uri = $_SERVER['REQUEST_URI'];
-        $val = $this->getMethod($routes = self::Routes, $uri);
+        $val = $this->getMethod();
         $_SERVER['QUERY_STRING'] = $val;
         require $val;
     }
