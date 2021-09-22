@@ -40,4 +40,4 @@ class Router extends Singleton
 $router = Router::getInstance();
 $router->run();
 $router = Router::getInstance();
-$router->getVar();
+$router->getVar();*/
