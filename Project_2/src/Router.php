@@ -3,21 +3,21 @@
 class Router extends Singleton 
 {
     
-    protected $routes = [
+    const Routes = [
         '/index' => '/index.php',
         '/create' => 'createDoc.php',
         '/update' => 'updateDoc.php'
     ];
 
     protected function getMethod($routes, $uri) {
-        $uri = $_SERVER['REQUEST_URI'];
+        
         foreach ($routes as $route => $val) {       
             if ($route == $uri) {
                 return $val;
             }
         }
     
-        return notFound();
+        return $this->notFound();
     }
 
     protected function notFound() {
@@ -27,7 +27,9 @@ class Router extends Singleton
     }
 
     public function run() {
-        $val = $this->getMethod($routes, $uri);
+        
+        $uri = $_SERVER['REQUEST_URI'];
+        $val = $this->getMethod($routes = self::Routes, $uri);
         $_SERVER['QUERY_STRING'] = $val;
         require $val;
     }
