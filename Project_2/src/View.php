@@ -1,5 +1,5 @@
 <?
-
+require 'Singleton.php';
 class View extends Singleton
 {
     public function render($template, $vars =[]) {
