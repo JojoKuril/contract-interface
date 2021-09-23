@@ -7,7 +7,7 @@ class DocController
     public function list()
     {
         $list = DocModel::getAll();
-        $list->View;
+        //$list->View;
     }
 
     public function create()
