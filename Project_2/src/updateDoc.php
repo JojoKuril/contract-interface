@@ -10,8 +10,8 @@ if (!empty($_POST)) {
             //$controller->delete($_POST['id']);
             
             $mustDelete = $_POST['id'];
-            var_dump($mustDelete);
             $fileDelete = unlink("data/docs/{$mustDelete}.json");
+            
             break;
         case 'updateUser':
             ;
@@ -81,7 +81,7 @@ if (!empty($_POST)) {
                         <td>
                             <a href="?id=<?php echo $parameter['id']?>">Edit</a>
                         <form method="POST" action="/updateDoc.php">
-                            <input type="hidden" name="id" value="">
+                            <input type="hidden" name="id" value="<?= $parameter['id'] ?>">
                             <input type="submit" value="удалить">
                             <input type="hidden" name="action" value="deleteUser">
                         </form>

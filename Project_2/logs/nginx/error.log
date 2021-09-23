@@ -151,3 +151,92 @@
 2021/09/23 06:15:39 [notice] 1#1: start worker process 23
 2021/09/23 06:15:39 [notice] 1#1: start worker process 24
 2021/09/23 06:15:39 [notice] 1#1: start worker process 25
+2021/09/23 18:58:59 [notice] 1#1: using the "epoll" event method
+2021/09/23 18:58:59 [notice] 1#1: nginx/1.21.3
+2021/09/23 18:58:59 [notice] 1#1: built by gcc 10.3.1 20210424 (Alpine 10.3.1_git20210424) 
+2021/09/23 18:58:59 [notice] 1#1: OS: Linux 5.11.0-36-generic
+2021/09/23 18:58:59 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/09/23 18:58:59 [notice] 1#1: start worker processes
+2021/09/23 18:58:59 [notice] 1#1: start worker process 21
+2021/09/23 19:42:29 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/09/23 19:42:29 [notice] 21#21: gracefully shutting down
+2021/09/23 19:42:29 [notice] 21#21: exiting
+2021/09/23 19:42:29 [notice] 21#21: exit
+2021/09/23 19:42:29 [notice] 1#1: signal 17 (SIGCHLD) received from 21
+2021/09/23 19:42:29 [notice] 1#1: worker process 21 exited with code 0
+2021/09/23 19:42:29 [notice] 1#1: exit
+2021/09/23 19:45:10 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 19:45:23 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 19:45:49 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 19:46:05 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 19:46:19 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 19:46:32 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 19:46:46 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 19:47:00 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 19:47:19 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 19:47:51 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 19:48:48 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 19:49:56 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 19:51:02 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 19:52:13 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 19:53:23 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 19:54:30 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 19:55:38 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 19:56:44 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 19:57:50 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 19:58:57 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 20:00:03 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 20:01:09 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 20:02:15 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 20:03:22 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 20:04:28 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 20:05:35 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 20:06:43 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 20:07:49 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 20:08:56 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 20:10:02 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 20:11:10 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 20:12:17 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 20:13:23 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 20:13:54 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 20:14:03 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 20:14:14 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 20:14:26 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 20:14:36 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 20:14:46 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 20:14:57 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 20:15:11 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 20:15:31 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 20:16:06 [notice] 1#1: using the "epoll" event method
+2021/09/23 20:16:06 [notice] 1#1: nginx/1.21.3
+2021/09/23 20:16:06 [notice] 1#1: built by gcc 10.3.1 20210424 (Alpine 10.3.1_git20210424) 
+2021/09/23 20:16:06 [notice] 1#1: OS: Linux 5.11.0-36-generic
+2021/09/23 20:16:06 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/09/23 20:16:06 [notice] 1#1: start worker processes
+2021/09/23 20:16:06 [notice] 1#1: start worker process 22
+2021/09/23 21:00:09 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 21:00:19 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 21:00:34 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 21:00:46 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 21:00:54 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 21:01:02 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 21:01:12 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 21:01:25 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 21:01:45 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 21:01:55 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 21:02:03 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 21:02:15 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 21:02:26 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 21:02:39 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 21:02:50 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 21:03:03 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 21:03:18 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 21:03:38 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:15
+2021/09/23 21:04:11 [notice] 1#1: using the "epoll" event method
+2021/09/23 21:04:11 [notice] 1#1: nginx/1.21.3
+2021/09/23 21:04:11 [notice] 1#1: built by gcc 10.3.1 20210424 (Alpine 10.3.1_git20210424) 
+2021/09/23 21:04:11 [notice] 1#1: OS: Linux 5.11.0-36-generic
+2021/09/23 21:04:11 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/09/23 21:04:11 [notice] 1#1: start worker processes
+2021/09/23 21:04:11 [notice] 1#1: start worker process 22
+2021/09/23 21:30:09 [error] 22#22: *34 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: crud.local, request: "GET /docAdd.php HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "crud.local"

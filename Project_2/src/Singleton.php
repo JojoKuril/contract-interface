@@ -2,9 +2,9 @@
 
 class Singleton
 {
-    private static $instance = null;
+    protected static $instance = null;
 
-    public static function getInstance(): Singleton
+    public static function getInstance(): self
     {
         if (static::$instance === null) {
             static::$instance = new static();

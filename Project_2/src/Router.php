@@ -1,16 +1,17 @@
 <?php
 
-require 'Singleton.php';
+require_once 'Singleton.php';
 class Router extends Singleton 
 {
     
     const Routes = [
         '/' => 'index.php',
         '/index' => '/index.php',
-        '/create' => 'createDoc.php',
+        '/create' => 'createNew.php',
         '/update' => 'updateDoc.php',
         '/users/update' => 'update.php',
-        '/users/create' => 'create.php'
+        '/users/create' => 'create.php',
+        '/list' => 'list.php'
     ];
 
     protected function getMethod() {
@@ -31,9 +32,12 @@ class Router extends Singleton
     }
 
     public function run() {
+        
         $val = $this->getMethod();
         $_SERVER['QUERY_STRING'] = $val;
+    
         require $val;
+        
     }
 
     public function getVar($name, $default = null) {

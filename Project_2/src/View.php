@@ -1,12 +1,13 @@
 <?
-require 'Singleton.php';
-class View extends Singleton
+
+class View 
 {
-    public function render($template, $vars =[]) {
-        var['title'] = 'Заголовок';
+    public static function render($template, $vars =[]) {
+        //var['title'] = 'Заголовок';
         extract($vars);
 
-        echo $title ;
-        require '/views' .  $template . '.forexpamle;';
+        //echo $title ;
+        
+        require __DIR__ . '/views/' .  $template . '.php';
     }
 }

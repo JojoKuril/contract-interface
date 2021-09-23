@@ -13,36 +13,23 @@ class DocModel
             $arr['id'] = str_replace('.json', '', $file);
             $parameters[] = $arr;
         }
-        
+        return $parameters;
     }
 
     public static  function update()
     {
     }
 
-    public static function delete()
+    public static function delete($mustDelete)
     {
-       $mustDelete = $_POST['id'].'.json';
-       $fileDelete = unlink('data/docs/'.$mustDelete);
+        $fileDelete = unlink("data/docs/{$mustDelete}.json");
         
     }
 
-    public static function create()
+    public static function create($data)
     {
-        $data = [
-            'company' => $_POST['company'],
-            'contractor' => $_POST['contractor'],
-            'signer' => $_POST['signer'],
-
-            'beginTerm' => $_POST['beginTerm'],
-            'endTerm' => $_POST['endTerm'],
-
-            'scopeOfTheAgreement' => $_POST['scopeOfTheAgreement'],
-            'amount' => $_POST['amount'],
-
-            'requisites' => $_POST['address'], $_POST['taxesID'], $_POST['payment']
-        ];
-
+        
+        
         $manyFiles = opendir('data/docs');
         $countJson = 1;
         while ($file = readdir($manyFiles)) {
