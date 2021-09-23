@@ -1,13 +1,17 @@
 <?php
 
-require_once __DIR__ . '/DocController.php';
-$controller = new DocController();
+/*require_once __DIR__ . '/DocController.php';
+$controller = new DocController();*/
 
 if (!empty($_POST)) {
     $action = $_POST["action"];
     switch ($action) {
         case 'deleteUser':
-            $controller->delete($_POST['id']);
+            //$controller->delete($_POST['id']);
+            
+            $mustDelete = $_POST['id'];
+            var_dump($mustDelete);
+            $fileDelete = unlink("data/docs/{$mustDelete}.json");
             break;
         case 'updateUser':
             ;
@@ -77,7 +81,7 @@ if (!empty($_POST)) {
                         <td>
                             <a href="?id=<?php echo $parameter['id']?>">Edit</a>
                         <form method="POST" action="/updateDoc.php">
-                            <input type="hidden" name="" value="">
+                            <input type="hidden" name="id" value="">
                             <input type="submit" value="удалить">
                             <input type="hidden" name="action" value="deleteUser">
                         </form>

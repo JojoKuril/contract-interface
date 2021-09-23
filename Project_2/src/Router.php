@@ -8,7 +8,9 @@ class Router extends Singleton
         '/' => 'index.php',
         '/index' => '/index.php',
         '/create' => 'createDoc.php',
-        '/update' => 'updateDoc.php'
+        '/update' => 'updateDoc.php',
+        '/users/update' => 'update.php',
+        '/users/create' => 'create.php'
     ];
 
     protected function getMethod() {

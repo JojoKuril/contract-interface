@@ -1,20 +1,24 @@
 <?php
 
-require_once __DIR__ . '/UserController.php';
-$controller = new UserController();
+require_once __DIR__ . '/CDocModel.php';
+$controller = new DocModel();
 
 if (!empty($_POST)) {
     $action = $_POST["action"];
     switch ($action) {
         case 'addContract':
             $controller->create(
-                                $_POST['company'], 
-                                $_POST['contractor'], 
-                                $_POST['signer'], 
-                                $_POST['beginTerm'], $_POST['endTerm'], 
-                                $_POST['scopeOfTheAgreement'], 
-                                $_POST['amount'], 
-                                $_POST['address'], $_POST['taxesID'], $_POST['payment']);
+                $_POST['company'],
+                $_POST['contractor'],
+                $_POST['signer'],
+                $_POST['beginTerm'],
+                $_POST['endTerm'],
+                $_POST['scopeOfTheAgreement'],
+                $_POST['amount'],
+                $_POST['address'],
+                $_POST['taxesID'],
+                $_POST['payment']
+            );
             break;
         default:
             die("Неизвестное действие");
@@ -53,20 +57,18 @@ if (!empty($_POST)) {
             <tbody>
 
                 <?php
-
                 $dir = 'data/docs';
                 $files = scandir($dir);
                 foreach ($files as $file) {
                     if ($file == "." || $file == "..") continue;
                     $data = file_get_contents('data/docs/' . $file);
                     $arr = json_decode($data, true);
+                    $arr['id'] = str_replace('.json', '', $file);
                     $parameters[] = $arr;
                 }
-
-
                 foreach ($parameters as $parameter) : ?>
                     <tr>
-                        <th scope="row"><?= $parameter ?></th>
+                        <th scope="row"><?= $parameter['id'] ?></th>
                         <td><?= $parameter['company'] ?></td>
                         <td><?= $parameter['contractor'] ?></td>
                         <td><?= $parameter['signer'] ?></td>
