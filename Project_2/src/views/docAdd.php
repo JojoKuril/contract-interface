@@ -1,4 +1,4 @@
-<html></html>
+<html>
 <div class="container">
     <table class="table">
         <thead class="thead-dark">
