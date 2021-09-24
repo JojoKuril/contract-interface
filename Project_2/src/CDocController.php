@@ -13,7 +13,9 @@ class DocController
 
     public function create() 
     { 
-        View::render('docAdd');
+        $errors = [];
+
+        
 
         if(!empty($_POST)) {
 
@@ -31,9 +33,15 @@ class DocController
             'requisites' => $_POST['address'], $_POST['taxesID'], $_POST['payment']
         ];
         
-        DocModel::create($data);
-        
+        $errors = DocModel::validate($data);
+        if($valid = true) {
+            DocModel::create($data);
+            header('Location: /list');
+            return;
+            }
         }
+        View::render('docAdd', ['errors'=> $errors]);
+
     }
 
     public function update()

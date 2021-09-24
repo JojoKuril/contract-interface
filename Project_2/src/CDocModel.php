@@ -23,13 +23,12 @@ class DocModel
     public static function delete($mustDelete)
     {
         $fileDelete = unlink("data/docs/{$mustDelete}.json");
-        
     }
 
     public static function create($data)
     {
-        
-        
+
+
         $manyFiles = opendir('data/docs');
         $countJson = 1;
         while ($file = readdir($manyFiles)) {
@@ -40,5 +39,30 @@ class DocModel
         }
 
         file_put_contents("data/docs/{$countJson}.json", json_encode($data, JSON_UNESCAPED_UNICODE));
+    }
+
+    public static function validate($data)
+    {
+        /*
+            $company = $_POST['company'];
+            $contractor = $_POST['contractor'];
+            $signer = $_POST['signer'];
+            $beginTerm = $_POST['beginTerm'];
+            $endTerm = $_POST['endTerm'];
+            $scopeOfTheAgreement = $_POST['scopeOfTheAgreement'];
+            $amount = $_POST['amount'];
+            $address = $_POST['address']; 
+            $taxes = $_POST['taxesID'];
+            $payment = $_POST['payment'];
+
+            $signer = ($_POST['signer']);
+            $pattern_signer = '/^.*[^А-яЁё].*$/';
+
+            if($_SERVER['REQUEST_METHOD'] == 'POST') 
+            {
+                if(!preg_match($pattern_signer, $signer) {
+                }
+            }
+        */
     }
 }
