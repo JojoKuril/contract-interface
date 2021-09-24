@@ -1,7 +1,6 @@
 <?
-require_once 'Singleton.php';
 
-class View extends Singleton 
+class View 
 {
     public static function render($template, $vars =[]) {
         extract($vars);
