@@ -11,7 +11,10 @@ class Router extends Singleton
         '/update' => 'updateDoc.php',
         '/users/update' => 'update.php',
         '/users/create' => 'create.php',
-        '/list' => 'list.php'
+        '/list' => 'list.php',
+        
+        
+        '/createDoc'=> 'createDoc.php'
     ];
 
     protected function getMethod() {
