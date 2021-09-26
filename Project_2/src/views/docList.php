@@ -6,10 +6,15 @@
                     <th scope="col">Организация</th>
                     <th scope="col">Контрагент</th>
                     <th scope="col">Подписант</th>
-                    <th scope="col">Срок договора</th>
+                    <th scope="col">Начало действия договора</th>
+                    <th scope="col">Конец действия договора</th>
                     <th scope="col">Предмет договора</th>
                     <th scope="col">Сумма договора</th>
                     <th scope="col">Реквизиты</th>
+                    <th scope="col">Адрес</th>
+                    <th scope="col">ИНН</th>
+                    <th scope="col">Рассчётный счёт</th>
+
                 </tr>
             </thead>
             <tbody>

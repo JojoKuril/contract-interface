@@ -13,17 +13,17 @@
             <form method="POST" action="/create">
                 <div>
     <tr>
-        <label for="company">Организация</label>
-        <input type="text" name="company" value="" required>
+    <label for="company">Организация</label>
+        <input type="text" name="company" value="<?= $parameter['company'] ?>" required>
 </div>
 <div>
     <label for="contractor">Контрагент</label>
-    <input type="text" name="contractor" value="" required>
+    <input type="text" name="contractor" value="<?= $parameter['contractor'] ?>" required>
 </div>
 
 <div>
     <label for="signer">Подписант</label>
-    <input type="data" name="signer" value="" required>
+    <input type="data" name="signer" value="<?= $parameter['signer'] ?>" required>
 </div>
 
 <div>
@@ -53,5 +53,5 @@
 </div>
 
 <input type="submit" value="Добавить">
-<input type="hidden" name="action" value="updateUser">
+<input type="hidden" name="action" value="addContract">
 </form>
