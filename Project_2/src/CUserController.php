@@ -1,24 +1,43 @@
 <?php
 
+require 'CUserModel.php';
+require 'View.php';
+
 class UserController
 {
     public function list()
     {
-        $list = UserModel::getAll();
+        $data = ['parameters'=>UserModel::getAll()];
+        View::render('userList', $data);
+        
     }
 
     public function create()
     {
-        $creator = UserModel::create();
+        $errors = [];
+
+        if(!empty($_POST)) {
+            $data = [];
+
+            $errors = UserModel::validate($data);
+            if($valid = true) {
+                UserModel::create($data);
+                header('Location: /userlist');
+                return;
+            }  
+        }
+        View::render('userAdd', ['errors'=> $errors]);
     }
 
     public function update()
     {
-        $updater = UserModel::update();
+        $data = UserModel::get();
+        View::render('userUp', $data);
     }
 
     public function delete()
     {
-        $deleter = UserModel::delete();
+        $data = UserModel::$_GET('id');
+        
     }
 }

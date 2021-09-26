@@ -46,6 +46,20 @@ class DocController
 
     public function update()
     {
+        $data = [
+            'company' => $_POST['company'],
+            'contractor' => $_POST['contractor'],
+            'signer' => $_POST['signer'],
+
+            'beginTerm' => $_POST['beginTerm'],
+            'endTerm' => $_POST['endTerm'],
+
+            'scopeOfTheAgreement' => $_POST['scopeOfTheAgreement'],
+            'amount' => $_POST['amount'],
+
+            'requisites' => $_POST['address'], $_POST['taxesID'], $_POST['payment']
+        ];
+        
         DocModel::update();
     }
 

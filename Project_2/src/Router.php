@@ -6,12 +6,14 @@ class Router extends Singleton
     
     const Routes = [
         '/' => 'index.php',
-        '/index' => '/index.php',
+        '/index' => 'index.php',
         '/create' => 'createNew.php',
         '/update' => 'updateDoc.php',
-        '/users/update' => 'update.php',
-        '/users/create' => 'create.php',
+        '/userlist?id=3' => 'userUpdate.php' ,
+        '/useradd' => 'createNewUsers.php',
         '/list' => 'list.php',
+        '/userlist' => 'listUsers.php',
+        '/docupdate' => 'docUpdate.php'
     ];
 
     protected function getMethod() {
@@ -41,7 +43,7 @@ class Router extends Singleton
     }
 
     public function getVar($name, $default = null) {
-
+            return trim($_POST[$name]);
     }
 }
 /*
