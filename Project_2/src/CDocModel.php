@@ -43,13 +43,14 @@ class DocModel
 
     public static function validate($data)
     {
-        $valid = true;
+        $errors = [];
+        //$valid = true;
         if(empty($data['company'])) {
-            //errors[]='бла-бла';
-            $valid = false;
+            $errors[] = 'бла-бла';
+            //$valid = false;
         }
 
-        return $valid;
+        return $errors;
         /*
             $data = [
             $company = $_POST['company'],
