@@ -43,17 +43,28 @@ class DocModel
 
     public static function validate($data)
     {
+        $valid = true;
+        if(empty($data['company'])) {
+            //errors[]='бла-бла';
+            $valid = false;
+        }
+
+        return $valid;
         /*
-            $company = $_POST['company'];
-            $contractor = $_POST['contractor'];
-            $signer = $_POST['signer'];
-            $beginTerm = $_POST['beginTerm'];
-            $endTerm = $_POST['endTerm'];
-            $scopeOfTheAgreement = $_POST['scopeOfTheAgreement'];
-            $amount = $_POST['amount'];
-            $address = $_POST['address']; 
-            $taxes = $_POST['taxesID'];
-            $payment = $_POST['payment'];
+            $data = [
+            $company = $_POST['company'],
+
+            $contractor =  Router::getVar($_POST['contractor']),
+
+            $signer = $_POST['signer'],
+            $beginTerm = $_POST['beginTerm'],
+            $endTerm = $_POST['endTerm'],
+            $scopeOfTheAgreement = $_POST['scopeOfTheAgreement'],
+            $amount = $_POST['amount'],
+            $address = $_POST['address'], 
+            $taxes = $_POST['taxesID'],
+            $payment = $_POST['payment'],
+            ];
 
             $signer = ($_POST['signer']);
             $pattern_signer = '/^.*[^А-яЁё].*$/';

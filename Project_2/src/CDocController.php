@@ -13,7 +13,11 @@ class DocController
 
     public function create() 
     { 
-        $errors = [];
+        $errors = [
+            'company' => 'Не меньше двух символов',
+        ];
+        $errors['company'] = 'Не меньше двух символов';
+        $errors[] = ['name' => $key, 'error' => $value['message']];
 
         
 
@@ -33,7 +37,7 @@ class DocController
             'requisites' => $_POST['address'], $_POST['taxesID'], $_POST['payment']
         ];
         
-        $errors = DocModel::validate($data);
+        $valid = DocModel::validate($data);
         if($valid = true) {
             DocModel::create($data);
             header('Location: /list');
