@@ -49,6 +49,9 @@ class DocModel
             $errors[] = 'бла-бла';
             //$valid = false;
         }
+        if(!empty($data['company'])) {
+            $errors[] = '';
+        }
 
         return $errors;
         /*
