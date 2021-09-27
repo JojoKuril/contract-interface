@@ -38,7 +38,7 @@ class DocController
         ];
         
         $valid = ['errors'=>DocModel::validate($data)];
-        if($valid = true) {
+        if(empty($valid)) {
             DocModel::create($data);
             header('Location: /list');
             return;
